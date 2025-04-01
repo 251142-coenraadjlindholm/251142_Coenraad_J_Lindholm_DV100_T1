@@ -1,0 +1,123 @@
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('assets/images/homePageHeader.png'); /* Added new background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #4B0082; /* Updated background color */
+    color: white; /* Added text color */
+}
+
+/* Navbar Styles */
+.navbar {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6A0DAD; /* Updated navbar background color */
+    padding: 15px;
+    border-radius: 30px;
+}
+.logo img {
+    height: 40px;
+    padding-left: 40px;
+}
+.menu {
+    display: flex;
+    gap: 20px;
+}
+.menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.menu a:hover {
+    background-color: #575757;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+.search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.search-bar button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #575757;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.hero-section img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.hero-section .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Section Styles */
+.featured-trip, .shuttles, .upcoming-trips {
+    padding: 4rem 0;
+}
+.featured-trip img, .shuttles img, .upcoming-trips img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #6A0DAD; /* Updated footer background color */
+    padding: 2rem 0;
+}
+.footer a {
+    color: white;
+}
+.footer .social-icons a {
+    margin: 0 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Additional Styles */
+.bg-purple {
+    background-color: #4B0082; /* Purple background */
+}

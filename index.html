@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Coenraad J. Lindholm 251142">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap, Space Travel, Mars, Jupiter, Saturn, Neptune, Red Planet Ventures, Space Exploration, Travel Agency">
+    <title>Red Planet Ventures</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> 
+
+    <title>Red Planet Ventures</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+            <body>
+                <!-- Header -->
+                <nav class="navbar navbar-expand-lg navbar-dark fixed-top space-navbar">
+                    <div class="container">
+                        <a class="navbar-brand space-logo" href="#">
+                            <img src="assets/images/logo.png" alt="Red Planet Ventures Logo" height="50">
+                            Red Planet Ventures
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto space-nav-links">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pages/Flights.html">Flights</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pages/Contact-Us.html">Contact Us</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline ml-3 space-search-form">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                            <div class="ml-3 space-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="badge badge-danger">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Hero Section -->
+                <section class="hero-section space-hero">
+                    <img src="assets/images/homePageHeader.png" alt="Space background with planets and rocket">
+                    <div class="hero-text space-hero-text">
+                        <h1 class="display-4">Red Planet Ventures</h1>
+                        <p class="lead">Explore the Solar System</p>
+                    </div>
+                </section>
+        
+                <!-- Featured Trip Section -->
+                <section class="featured-trip bg-purple space-featured-trip">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <!-- Carousel Section -->
+                            <div class="col-md-6">
+                                <div id="mars-Carousel" class="carousel slide space-carousel" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="assets/images/marsSliderClipped1.png" class="d-block w-100" alt="Mars landscape 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/images/marsSliderClipped2.png" class="d-block w-100" alt="Mars landscape 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/images/marsSliderClipped3.png" class="d-block w-100" alt="Mars landscape 3">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/images/marsSliderClipped4.png" class="d-block w-100" alt="Mars landscape 4">
+                                        </div>
+                                    </div>
+                                    <!-- Custom Arrows -->
+                                    <a class="carousel-control-prev" href="#marsCarousel" role="button" data-slide="prev">
+                                        <!-- <img src="assets/images/arrowLeftWhite.png" alt="Previous" class="carousel-control-prev-icon"> --> 
+                                    </a>
+                                    <a class="carousel-control-next" href="#marsCarousel" role="button" data-slide="next">
+                                        <!-- <img src="assets/images/arrowRightWhite.png" alt="Next" class="carousel-control-next-icon"> -->
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Text Section -->
+                            <div class="col-md-6">
+                                <h2 class="text-primary">Featured Trip</h2>
+                                <h3 class="display-4">The Classic Mars Experience</h3>
+                                <p>Embark on a Mars vacation: red deserts, ancient relics, and towering canyons await. Enjoy low-gravity hiking, rover trips to Olympus Mons, and stargazing under Phobos and Deimos. Unforgettable adventures beckon on the rust-colored landscapes of the Red Planet.</p>
+                                <button class="btn btn-danger btn-lg">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Shuttles Section -->
+                <section class="shuttles bg-light text-dark space-shuttles">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h2 class="text-primary">Our Shuttles</h2>
+                                <h3 class="display-4">Travel In Style With A Variety Of Shuttles</h3>
+                                <p>Select from our range of luxury, commercial, or budget shuttles to fulfill your dream space vacation. Experience unparalleled comfort and convenience as you journey to your planet of choice, ensuring an unforgettable and tailored experience for every traveler.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="assets/images/spacSchuttles.png" alt="Various space shuttles">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Upcoming Trips Section -->
+                <section class="upcoming-trips bg-purple space-upcoming-trips">
+                    <div class="container text-center">
+                        <h2 class="text-primary">Upcoming Trip Sneak Peak</h2>
+                        <h3 class="display-4">Take A Look At Some Of Our Upcoming Trips</h3>
+                        <div class="row mt-5">
+                            <div class="col-md-3">
+                                <div class="card bg-secondary text-white space-trip-card">
+                                    <img src="assets/images/upcomingTrip1.png" class="card-img-top" alt="Mars planet">
+                                    <div class="card-body">
+                                        <h5 class="card-title">The Classic Mars Experience</h5>
+                                        <p class="card-text">Explore red deserts, ancient relics, low-gravity adventures on Mars.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card bg-secondary text-white space-trip-card">
+                                    <img src="assets/images/upcomingTrip2.png" class="card-img-top" alt="Neptune planet">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Neptune’s Cosmic Dive</h5>
+                                        <p class="card-text">Experience Neptune’s mysterious depths in a celestial voyage.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card bg-secondary text-white space-trip-card">
+                                    <img src="assets/images/upcomingTrip3.png" class="card-img-top" alt="Jupiter planet">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Jupiter: The Giant’s Journey</h5>
+                                        <p class="card-text">Embark on Jupiter and witness the gas giant’s majesty.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card bg-secondary text-white space-trip-card">
+                                    <img src="assets/images/upcomingTrip4.png" class="card-img-top" alt="Saturn planet">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ring a Round a Saturn</h5>
+                                        <p class="card-text">Explore Saturn’s rings, moons, and enigmatic beauty on an odyssey.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-danger btn-lg mt-5">Book a Trip Now</button>
+                    </div>
+                </section>
+                
+                <!-- Footer -->
+                <footer class="footer bg-white text-dark space-footer">
+                    <div class="container text-center text-md-left">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h5 class="font-weight-bold">Red Planet Ventures</h5>
+                                <p>Offering unforgettable trips to explore planets in our solar system.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="font-weight-bold">Company</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Flights</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="font-weight-bold">Social Media Links</h5>
+                                <div class="social-icons">
+                                    <a href="#"><img src="assets/images/smInstagram.png" alt="Instagram" width="30" height="30"></a>
+                                    <a href="#"><img src="assets/images/smX.png" alt="Twitter/X" width="30" height="30"></a>
+                                    <a href="#"><img src="assets/images/smTicktock.png" alt="TikTok" width="30" height="30"></a>
+                                    <a href="#"><img src="assets/images/smFacebook.png" alt="Facebook" width="30" height="30"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <p>All Rights Reserved @ Open Window 2024</p>
+                            </div>
+                            <div class="col-md-6 text-md-right">
+                                <a href="#">Terms & Conditions</a>
+                                <a href="#" class="ml-3">Privacy & Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+        
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        </body>
+    </html>
