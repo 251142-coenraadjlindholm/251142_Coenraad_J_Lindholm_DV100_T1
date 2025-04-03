@@ -74,7 +74,7 @@ body {
 }
 .hero-section img {
     width: 100%;
-    height: 600px;
+    height: 100vh;
     object-fit: cover;
 }
 .hero-section .hero-text {
