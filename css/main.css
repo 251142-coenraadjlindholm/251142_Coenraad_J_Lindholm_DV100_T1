@@ -121,3 +121,88 @@ body {
 .bg-purple {
     background-color: #4B0082; /* Purple background */
 }
+
+.navbar {
+    background-color: #6A1D89;
+}
+
+.navbar-brand {
+    font-size: 2em;
+    color: #fff;
+    font-weight: bold;
+}
+
+.search-bar {
+    width: 250px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.card {
+    background-color: #6A1D89;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-size: 1.2em;
+    color: #F9A602;
+}
+
+.card-body {
+    background-color: #3E1C56;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #F9A602;
+}
+
+.rating {
+    font-size: 1.2em;
+}
+
+.btn-primary {
+    background-color: #D32F2F;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #F44336;
+}
+
+.footer {
+    background-color: #6A1D89;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer .social-links img {
+    width: 35px;
+    margin: 5px;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.container {
+    margin-top: 30px;
+}
