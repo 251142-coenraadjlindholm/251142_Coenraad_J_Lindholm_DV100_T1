@@ -206,3 +206,84 @@ body {
 .container {
     margin-top: 30px;
 }
+
+ /* Navbar */
+ .navbar {
+    background-color: #6A1D89;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link.active {
+    color: #FF3D71 !important;
+}
+
+.search-bar {
+    width: 250px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Banner */
+.banner {
+    background: url('banner-bg.jpg') no-repeat center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 0;
+}
+
+.about-text {
+    font-size: 1.2em;
+}
+
+/* Contact Details */
+.social-icons img {
+    width: 50px;
+    margin: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+    background: url('contact-bg.jpg') no-repeat center;
+    background-size: cover;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.contact-form .btn-primary {
+    background-color: #FF3D71;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
