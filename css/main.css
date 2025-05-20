@@ -79,9 +79,10 @@ body {
 }
 .hero-section .hero-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 85%;
+    left: 20%;
     transform: translate(-50%, -50%);
+    color: #e51728;
 }
 
 /* Section Styles */
@@ -99,7 +100,7 @@ body {
     padding: 2rem 0;
 }
 .footer a {
-    color: white;
+    color: #000000;
 }
 .footer .social-icons a {
     margin: 0 0.5rem;
@@ -139,7 +140,7 @@ body {
 }
 
 .card {
-    background-color: #6A1D89;
+    background-color: #45016d;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -157,9 +158,10 @@ body {
 }
 
 .card-body {
-    background-color: #3E1C56;
-    padding: 25px;
-    border-radius: 10px;
+    background-color: #45016d;
+    padding: 50px;
+    border-radius: 50px;
+    height: 100%;
 }
 
 .price {
@@ -186,7 +188,7 @@ body {
     background-color: #6A1D89;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 30px;
 }
 
 .footer .social-links img {
