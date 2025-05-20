@@ -10,8 +10,6 @@
 body {
     margin: 0;
     height: 100vh;
-    background-image: url('assets/images/homePageHeader.png'); /* Added new background image */
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #4B0082; /* Updated background color */
@@ -83,6 +81,78 @@ body {
     left: 20%;
     transform: translate(-50%, -50%);
     color: #e51728;
+}
+
+/* Contact Page Hero Section */
+.contact-hero {
+    background: url(../assets/images/headerbackBack.png) no-repeat center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flights Hero Section */
+.flights-hero {
+    background: url(../assets/images/headerbackBack.png) no-repeat center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flight-card-img {
+    height: 55vh;
+    width: 45vh;
+}
+/* Even cards */
+.card-even {
+    background-color: #45016d;
+    padding: 60px;
+    border-radius: 50px;
+    height: 70vh;
+}
+.card-body-even{
+    background-color: #45016d;
+    padding: 60px;
+    border-radius: 50px;
+    height: 50vh;
+}
+
+.card-title-even{
+    color: #ffffff;
+}
+
+.card-text-even{
+    color: #ffffff;
+}
+
+/* Uneven cards */
+.card-uneven {
+    background-color: #ffffff;
+    padding: 60px;
+    border-radius: 50px;
+    height: 65vh;
+}
+.card-body-uneven{
+    background-color: #ffffff;
+    padding: 60px;
+    border-radius: 50px;
+    height: 55vh;
+}
+
+.card-title-uneven {
+    color: #000000;
+}
+
+.card-text-uneven {
+    color: #000000;
+}
+
+.details-uneven {
+    color: #000000;
 }
 
 /* Section Styles */
@@ -157,11 +227,11 @@ body {
     color: #F9A602;
 }
 
-.card-body {
+.card-body-flights {
     background-color: #45016d;
-    padding: 50px;
+    padding: 60px;
     border-radius: 50px;
-    height: 100%;
+    height: 60vh;
 }
 
 .price {
@@ -252,10 +322,13 @@ body {
 /* About Section */
 .about-section {
     padding: 50px 0;
+    background-color: #ffffff;
 }
 
 .about-text {
     font-size: 1.2em;
+    color: #333;
+    align-items: center;
 }
 
 /* Contact Details */
@@ -266,7 +339,7 @@ body {
 
 /* Contact Form */
 .contact-form {
-    background: url('contact-bg.jpg') no-repeat center;
+    background: url('../assets/images/formBack.png') no-repeat center;
     background-size: cover;
     padding: 30px;
     border-radius: 10px;
@@ -289,3 +362,14 @@ body {
     font-size: 1.2em;
     font-weight: bold;
 }
+
+.text-primary {
+    color: #FF3D71;
+    align-self: center;
+}
+.shuttles {
+    background-color: #6A1D89;
+    padding: 50px 0;
+    height : 100vh;
+}
+
