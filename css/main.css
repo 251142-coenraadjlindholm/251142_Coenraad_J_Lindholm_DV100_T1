@@ -25,7 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #6A0DAD; /* Updated navbar background color */
+    background-color: #ffffffc9; /* Updated navbar background color */
     padding: 15px;
     border-radius: 30px;
 }
@@ -162,6 +162,7 @@ body {
 .featured-trip img, .shuttles img, .upcoming-trips img {
     width: 100%;
     border-radius: 0.5rem;
+    background-color: #45016d;
 }
 
 /* Footer Styles */
@@ -189,12 +190,12 @@ body {
 }
 
 /* Additional Styles */
-.bg-purple {
-    background-color: #4B0082; /* Purple background */
-}
+ .bg-purple {
+    background-color: #4B0082; 
+} /* Purple background */
 
 .navbar {
-    background-color: #6a1d8973;
+    background-color: #ffffffc9;
 }
 
 .navbar-brand {
@@ -281,7 +282,7 @@ body {
 
  /* Navbar */
  .navbar {
-    background-color: #6a1d8960;
+    background-color: #ffffffc9;
 }
 
 .navbar-brand {
