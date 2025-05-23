@@ -25,7 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffffc9; /* Updated navbar background color */
+    background-color: #ffffff94; /* Updated navbar background color */
     padding: 15px;
     border-radius: 30px;
 }
@@ -110,7 +110,7 @@ body {
 /* Even cards */
 .card-even {
     background-color: #45016d;
-    padding: 60px;
+    padding: 30px;
     border-radius: 50px;
     height: 70vh;
 }
@@ -134,11 +134,11 @@ body {
     background-color: #ffffff;
     padding: 60px;
     border-radius: 50px;
-    height: 65vh;
+    height: 70vh;
 }
 .card-body-uneven{
     background-color: #ffffff;
-    padding: 60px;
+    padding: 40px;
     border-radius: 50px;
     height: 55vh;
 }
@@ -195,7 +195,7 @@ body {
 } /* Purple background */
 
 .navbar {
-    background-color: #ffffffc9;
+    background-color: #ffffff94;
 }
 
 .navbar-brand {
@@ -282,7 +282,7 @@ body {
 
  /* Navbar */
  .navbar {
-    background-color: #ffffffc9;
+    background-color: #ffffff94; /* Updated navbar background color */
 }
 
 .navbar-brand {
@@ -342,16 +342,17 @@ body {
 .contact-form {
     background: url('../assets/images/formBack.png') no-repeat center;
     background-size: cover;
-    padding: 30px;
+    padding: 40px;
     border-radius: 10px;
     color: white;
+    height: 100vh;
 }
 
 .contact-form input,
 .contact-form textarea {
     background-color: white;
     border: none;
-    padding: 10px;
+    padding: 40px;
     margin-bottom: 15px;
     border-radius: 5px;
 }
