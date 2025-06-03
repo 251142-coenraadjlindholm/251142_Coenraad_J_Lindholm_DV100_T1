@@ -28,7 +28,7 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav mx-auto space-nav-links">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../index.html">Home   </a>
+                                    <a class="nav-link" href="../index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Flights</a>
@@ -37,7 +37,7 @@
                                     <a class="nav-link" href="../pages/Contact-Us.html">Contact Us</a>
                                 </li>
                             </ul>
-                            <form class="form-inline ml-3 space-search-form">
+                            <form class="form-inline ml-3 space-search-form" id="searchForm">
                                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
                             </form>
@@ -103,7 +103,7 @@
 
                                 <div class="d-flex align-items-center mt-3">
                                     <button class="btn btn-outline-primary" onclick="decrease()">-</button>
-                                    <span class="mx-3">0</span>
+                                    <span class="mx-3" style="color: black;">0</span>
                                     <button class="btn btn-outline-primary" onclick="increase()">+</button>
                                     <button class="btn btn-danger ml-3">Book Now</button>
                                 </div>
@@ -178,7 +178,7 @@
                                 <p class="card-text-uneven">Embark on a Jupiter voyage aboard the Jupiter Odyssey. Witness its majestic storms and swirling atmospheres. Use microgravity to float among its bands, moons, and deep oceans. Experience cosmic wonder in luxury, blending exploration and relaxation.</p>
                                 <div class="d-flex align-items-center mt-3">
                                     <button class="btn btn-outline-primary" onclick="decrease()">-</button>
-                                    <span class="mx-3">0</span>
+                                    <span class="mx-3" style="color: black;">0</span>
                                     <button class="btn btn-outline-primary" onclick="increase()">+</button>
                                     <button class="btn btn-danger ml-3">Book Now</button>
                                 </div>
@@ -252,7 +252,7 @@
                                 <p class="card-text-uneven">Embark on a cosmic adventure to Uranus with our Uranus Uncharted tour. Explore its icy rings, witness mesmerizing auroras, and immerse yourself in gravity-defying activities. Experience the wonders of Uranus in a journey of a lifetime.</p>
                                 <div class="d-flex align-items-center mt-3">
                                     <button class="btn btn-outline-primary" onclick="decrease()">-</button>
-                                    <span class="mx-3">0</span>
+                                    <span class="mx-3" style="color: black;">0</span>
                                     <button class="btn btn-outline-primary" onclick="increase()">+</button>
                                     <button class="btn btn-danger ml-3">Book Now</button>
                                 </div>
@@ -346,6 +346,8 @@
                 </footer>
         
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script src="../js/script.js"></script>
         </body>
     </html>
