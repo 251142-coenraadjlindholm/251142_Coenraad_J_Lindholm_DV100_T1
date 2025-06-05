@@ -95,8 +95,23 @@ document.addEventListener('DOMContentLoaded', function () {
         cartIcon.addEventListener('click', function () {
             alert('View your cart (feature coming soon)!');
         });
-    }
+   }
 });
+
+// Link to cart page
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Make the cart icon link to the cart page
+//     const cart = document.querySelector('.space-cart');
+//     if (cart) {
+//         cart.addEventListener('click', function (e) {
+//             // Only prevent default if it's not already an <a> with the correct href
+//             if (!cart.getAttribute('href')) {
+//                 e.preventDefault();
+//                 window.location.href = 'pages/cart.html'; // Adjust path if needed
+//             }
+//         });
+//     }
+// });
 
 //Cart Page Functionality//
     
