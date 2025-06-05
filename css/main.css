@@ -30,9 +30,11 @@ body {
     border-radius: 30px;
 }
 .logo img {
-    height: 40px;
-    padding-left: 40px;
+    height: 48px;
+    width: 266px;
+    padding-left: 20px;
 }
+
 .menu {
     display: flex;
     gap: 20px;
@@ -92,7 +94,12 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+/* Flights Page Book a Flight Section */
+.book-flight-heading {
+    font-family: 'Porter Sans Block', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 /* Flights Hero Section */
 .flights-hero {
     background: url(../assets/images/headerbackBack.png) no-repeat center;
@@ -228,6 +235,10 @@ body {
     color: #F9A602;
 }
 
+.card-body{
+    background-color: #45016d;
+}
+
 .card-body-flights {
     background-color: #45016d;
     padding: 60px;
@@ -283,6 +294,7 @@ body {
  /* Navbar */
  .navbar {
     background-color: #ffffff94; /* Updated navbar background color */
+    
 }
 
 .navbar-brand {
@@ -292,7 +304,7 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: white !important;
+    color: black !important;
     font-weight: bold;
 }
 
@@ -322,7 +334,7 @@ body {
 
 /* About Section */
 .about-section {
-    padding: 50px 0;
+    padding: 50px ;
     background-color: #ffffff;
 }
 
@@ -330,6 +342,11 @@ body {
     font-size: 1.2em;
     color: #333;
     align-items: center;
+}
+
+.font-weight-bold-about {
+    font-weight: bold;
+    color: #45016d;
 }
 
 /* Contact Details */
@@ -371,7 +388,87 @@ body {
 }
 .shuttles {
     background-color: #6A1D89;
-    padding: 50px 0;
+    padding: 50px;
     height : 100vh;
 }
 
+/* Hide Bootstrap's default carousel arrow icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none;
+}
+
+/* Style your custom arrow images */
+.carousel-control-prev img,
+.carousel-control-next img {
+    width: 60px;      /* Adjust size as needed */
+    height: 80px;
+    filter: none;     /* Ensure the arrow stays white */
+    display: block;
+    margin: 0 auto;
+    background: none;
+    box-shadow: none;
+    border: none;
+    pointer-events: none; /* Prevent double click events on the image itself */
+}
+
+/* Optional: Make the clickable area larger for better UX */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+    opacity: 1;
+}
+
+/* Contact us about */
+
+/* Carts Page Css*/
+body {
+            background-color: #4B0082;
+            color: white;
+        }
+        .cart-table th, .cart-table td {
+            vertical-align: middle;
+            color: white;
+            border-color: #fff;
+        }
+        .cart-table {
+            background: rgba(0,0,0,0.2);
+        }
+        .cart-table thead {
+            background: rgba(255,255,255,0.08);
+        }
+        .cart-table .btn-outline-primary,
+        .cart-table .btn-danger {
+            border-radius: 20px;
+        }
+        .cart-table .btn-outline-primary {
+            color: #4B0082;
+            border-color: #4B0082;
+            background: #fff;
+        }
+        .cart-table .btn-outline-primary:hover {
+            background: #4B0082;
+            color: #fff;
+        }
+        .cart-table .btn-danger {
+            background: #e51728;
+            border: none;
+        }
+        .cart-table .btn-danger:hover {
+            background: #b0101e;
+        }
+        .cart-title {
+            color: #e51728;
+            font-family: 'Porter Sans Block', Arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .space-navbar {
+            margin-bottom: 40px;
+        }
+        .cart-total {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #e51728;
+            margin-top: 20px;
+        }
