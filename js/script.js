@@ -73,78 +73,128 @@ document.getElementById("searchForm").addEventListener("submit", function (e) {
   }
 });
 
+// Add to Cart functionality
+$(document).on('click', '.book-now-btn', function() {
+    const id = $(this).data('id');
+    const name = $(this).data('name');
+    const image = $(this).data('image');
+    const price = parseFloat($(this).data('price'));
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const existing = cart.find(item => item.id === id);
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({ id, name, image, price, quantity: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartBadge();
+    alert(`${name} added to cart!`);
+});
+
 // Cart functionality//
 document.addEventListener('DOMContentLoaded', function () {
     // Get the cart badge element//
     const cartBadge = document.querySelector('.space-cart .badge-danger');
     let cartCount = parseInt(cartBadge.textContent, 10) || 0;
 
-    // Add click event to all "Book Now" buttons//
-    document.querySelectorAll('.btn-danger').forEach(function(btn) {
-        if (btn.textContent.trim().toLowerCase() === 'book now') {
-            btn.addEventListener('click', function () {
-                cartCount++;
-                cartBadge.textContent = cartCount;
-            });
-        }
-    });
+// Add click event to all "Book Now" buttons//
+    $(document).on('click', '.book-now-btn', function() {
+    const id = $(this).data('id');
+    const name = $(this).data('name');
+    const image = $(this).data('image');
+    const price = parseFloat($(this).data('price'));
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Optional: Show a message when the cart icon is clicked//
-    const cartIcon = document.querySelector('.space-cart');
-    if (cartIcon) {
-        cartIcon.addEventListener('click', function () {
-            alert('View your cart (feature coming soon)!');
-        });
-   }
+    const existing = cart.find(item => item.id === id);
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({ id, name, image, price, quantity: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartBadge();
+    alert(`${name} added to cart!`);
 });
 
-// Link to cart page
-// document.addEventListener('DOMContentLoaded', function () {
-//     // Make the cart icon link to the cart page
-//     const cart = document.querySelector('.space-cart');
-//     if (cart) {
-//         cart.addEventListener('click', function (e) {
-//             // Only prevent default if it's not already an <a> with the correct href
-//             if (!cart.getAttribute('href')) {
-//                 e.preventDefault();
-//                 window.location.href = 'pages/cart.html'; // Adjust path if needed
-//             }
-//         });
-//     }
-// });
+function updateCartBadge() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let count = cart.reduce((sum, item) => sum + item.quantity, 0);
+    $('.space-cart .badge').text(count);
+}
+
+$(document).ready(function() {
+    updateCartBadge();
+});
+
 
 //Cart Page Functionality//
     
-    // Simple quantity controls (static demo)//
-    document.querySelectorAll('.btn-increase').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            var counter = btn.parentElement.querySelector('.counter');
-            var value = parseInt(counter.textContent, 10);
-            counter.textContent = value + 1;
-        });
+function renderCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let $tbody = $('.cart-table tbody');
+    $tbody.empty();
+    let total = 0;
+
+    cart.forEach(item => {
+        let subtotal = item.price * item.quantity;
+        total += subtotal;
+        $tbody.append(`
+            <tr>
+                <td><img src="${item.image}" alt="${item.name}" style="width: 80px;"></td>
+                <td>
+                    <strong>${item.name}</strong>
+                </td>
+                <td>R ${item.price.toLocaleString()}</td>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-outline-primary btn-sm btn-decrease" data-id="${item.id}">-</button>
+                        <span class="mx-2 counter">${item.quantity}</span>
+                        <button class="btn btn-outline-primary btn-sm btn-increase" data-id="${item.id}">+</button>
+                    </div>
+                </td>
+                <td>R ${subtotal.toLocaleString()}</td>
+                <td>
+                    <button class="btn btn-danger btn-sm btn-remove" data-id="${item.id}">Remove</button>
+                </td>
+            </tr>
+        `);
     });
-    document.querySelectorAll('.btn-decrease').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            var counter = btn.parentElement.querySelector('.counter');
-            var value = parseInt(counter.textContent, 10);
-            if (value > 1) counter.textContent = value - 1;
-        });
-    });
-    // Remove row//
-    document.querySelectorAll('.btn-danger').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            var row = btn.closest('tr');
-            if(row) row.remove();
-        });
-    });
-    // Update total price//
-    function updateTotalPrice() {
-        let total = 0;
-        document.querySelectorAll('.cart-item').forEach(function(item) {
-            const price = parseFloat(item.querySelector('.price').textContent.replace('$', ''));
-            const quantity = parseInt(item.querySelector('.counter').textContent, 10);
-            total += price * quantity;
-        });
-        document.getElementById('totalPrice').textContent = '$' + total.toFixed(2);
+
+    $('.cart-table tfoot .font-weight-bold').last().text('R ' + total.toLocaleString());
+    updateCartBadge();
+}
+
+// Quantity and Remove handlers
+$(document).on('click', '.btn-increase', function() {
+    let id = $(this).data('id');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let item = cart.find(i => i.id === id);
+    if (item) item.quantity += 1;
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+});
+$(document).on('click', '.btn-decrease', function() {
+    let id = $(this).data('id');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let item = cart.find(i => i.id === id);
+    if (item && item.quantity > 1) item.quantity -= 1;
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+});
+$(document).on('click', '.btn-remove', function() {
+    let id = $(this).data('id');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = cart.filter(i => i.id !== id);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+});
+
+// On Cart page load
+$(document).ready(function() {
+    if ($('.cart-table').length) {
+        renderCart();
     }
-    
+    updateCartBadge();
+})});
+

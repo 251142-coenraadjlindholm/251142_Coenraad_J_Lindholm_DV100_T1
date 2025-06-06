@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto space-nav-links">
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/Index.html">Home</a>
+                        <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../pages/Flights.html">Flights</a>
@@ -37,7 +37,7 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
                 </form>
-                <a href="../assets/pages/Cart.html" class="mx-3 space-cart">
+                <a href="Cart.html" class="mx-3 space-cart">
                     <i class="fas fa-shopping-cart"></i>
                 <span class="badge badge-danger">2</span>
                 </a>
@@ -50,73 +50,27 @@
         <h1 class="mb-4 cart-title">Your Shopping Cart</h1>
         <div class="table-responsive">
             <table class="table table-bordered cart-table">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Details</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Subtotal</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Example Cart Item 1 -->
-                    <tr>
-                        <td>
-                            <img src="../assets/images/flighhtMars.png" alt="Mars" style="width: 80px;">
-                        </td>
-                        <td>
-                            <strong>The Classic Mars Experience</strong><br>
-                            Style: The Voyager<br>
-                            Tags: Mars, Luxury, Space<br>
-                            Date: 1 June - 30 July
-                        </td>
-                        <td>R 25,000.00</td>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <button class="btn btn-outline-primary btn-sm btn-decrease">-</button>
-                                <span class="mx-2 counter">1</span>
-                                <button class="btn btn-outline-primary btn-sm btn-increase">+</button>
-                            </div>
-                        </td>
-                        <td>R 25,000.00</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm">Remove</button>
-                        </td>
-                    </tr>
-                    <!-- Example Cart Item 2 -->
-                    <tr>
-                        <td>
-                            <img src="../assets/images/flightNeptune.png" alt="Neptune" style="width: 80px;">
-                        </td>
-                        <td>
-                            <strong>Neptune’s Cosmic Dive</strong><br>
-                            Style: The Voyager<br>
-                            Tags: Neptune, Commercial, Space<br>
-                            Date: 4 April - 28 March
-                        </td>
-                        <td>R 45,000.00</td>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <button class="btn btn-outline-primary btn-sm btn-decrease">-</button>
-                                <span class="mx-2 counter">1</span>
-                                <button class="btn btn-outline-primary btn-sm btn-increase">+</button>
-                            </div>
-                        </td>
-                        <td>R 45,000.00</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm">Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="4" class="text-right font-weight-bold">Total</td>
-                        <td colspan="2" class="font-weight-bold">R 70,000.00</td>
-                    </tr>
-                </tfoot>
-            </table>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Details</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Cart items will be injected here by JS -->
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4" class="text-right font-weight-bold">Total</td>
+            <td class="font-weight-bold"></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
         </div>
         <div class="d-flex justify-content-between">
             <a href="Flights.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Continue Shopping</a>
