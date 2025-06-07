@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 //Index//
 //Carousel//
 document.addEventListener('DOMContentLoaded', function () {
@@ -198,3 +199,18 @@ $(document).ready(function() {
     updateCartBadge();
 })});
 
+=======
+    function updateDisplay() {
+      document.getElementById('btn btn-outline-primary').textContent = count;
+    }
+
+    function increase() {
+      count += 1;
+      updateDisplay();
+    }
+
+    function decrease() {
+      count -= 1;
+      updateDisplay();
+    }
+>>>>>>> parent of fe1b500 (Added seaarch bar js and fixed errors)
