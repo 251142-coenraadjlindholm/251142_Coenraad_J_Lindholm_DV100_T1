@@ -472,3 +472,129 @@ body {
             color: #e51728;
             margin-top: 20px;
         }
+
+        /* About */
+
+/* Navbar */
+.about-navbar {
+    background: #ffffffc9
+    
+}
+.about-navbar .nav-link {
+    color: #000000 !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+.about-navbar .nav-link:hover,
+.about-navbar .nav-link.active {
+    color: #000000 !important;
+}
+.about-logo img {
+    filter: drop-shadow(0 2px 4px #0008);
+}
+
+/* Hero Section */
+.about-hero-section {
+    background: url('../assets/images/headerbackBack.png') no-repeat center;
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-bottom: 2px solid #ff4c60;
+}
+.about-hero-section .display-4 {
+    color: #000000;
+    text-shadow: 0 2px 8px #000a;
+}
+
+/* Main Content */
+.about-main-container {
+    background: rgba(255,255,255,0.05);
+    border-radius: 24px;
+    padding: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Section Titles */
+.about-section-title {
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Lists */
+.about-main-container ul {
+    padding-left: 20px;
+}
+.about-main-container ul li {
+    margin-bottom: 8px;
+}
+
+/* Blockquote (reviews) */
+.about-main-container blockquote {
+    border-left: 4px solid #000000;
+    padding-left: 16px;
+    color: #fff;
+    font-style: italic;
+    background: rgba(255,76,96,0.05);
+    border-radius: 6px;
+}
+
+/* Social Icons */
+.about-social-icons img {
+    margin-right: 12px;
+    transition: transform 0.2s;
+    filter: grayscale(0.2) brightness(0.95);
+}
+.about-social-icons img:hover {
+    transform: scale(1.15);
+    filter: grayscale(0) brightness(1.1);
+}
+
+/* Footer */
+.about-footer {
+    background: #fff;
+    color: #222;
+    padding: 32px 0 16px 0;
+    border-top: 2px solid #ff4c60;
+}
+.about-footer h5,
+.about-footer .about-section-title {
+    color: #000000;
+    font-weight: 700;
+}
+.about-footer a {
+    color: #000000;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.about-footer a:hover {
+    text-decoration: underline;
+}
+.about-footer .about-social-icons img {
+    height: 36px;
+    margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .about-hero-section {
+        padding: 40px 0 20px 0;
+        height: auto;
+    }
+    .about-main-container {
+        padding: 20px 8px 16px 8px;
+    }
+    .about-footer {
+        padding: 18px 0 8px 0;
+    }
+    .about-logo img {
+        height: 36px;
+    }
+}
+
+.mb-0 {
+   color: black;
+}

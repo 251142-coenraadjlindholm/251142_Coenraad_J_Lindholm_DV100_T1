@@ -4,37 +4,52 @@
     <meta charset="UTF-8">
     <title>About | Red Planet Ventures</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Main site CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <!-- Bootstrap & FontAwesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top space-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top about-navbar">
         <div class="container">
-            <a class="navbar-brand space-logo" href="../index.html">
+            <a class="navbar-brand about-logo" href="../index.html">
                 <img src="../assets/images/logo.png" alt="Red Planet Ventures Logo" height="50">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto space-nav-links">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Flights.html">Flights</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Contact-Us.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                <ul class="navbar-nav mx-auto about-nav-links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Flights.html">Flights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact-Us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="About.html">About Us</a>
+                    </li>
                 </ul>
-                <div class="ml-3 space-cart" data-toggle="modal" data-target="#cartModal" style="cursor:pointer;">
+                <form class="form-inline ml-3 about-search-form" id="aboutSearchForm">
+                    <input class="form-control mr-sm-2" id="aboutSearchInput" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="ml-3 about-cart" data-toggle="modal" data-target="#cartModal" style="cursor:pointer;">
                     <i class="fas fa-shopping-cart"></i>
-                    <span class="badge badge-danger">0</span>
+                    <span class="badge badge-danger">2</span>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section flights-hero mt-5 pt-5">
+    <section class="about-hero-section" style="background: url('../assets/images/headerbackBack.png') no-repeat center; background-size: cover; height: 40vh; display: flex; align-items: center;">
         <div class="container text-center">
             <h1 class="display-4 font-weight-bold mb-3">About Red Planet Ventures</h1>
             <p class="lead">Offering unforgettable trips to explore planets in our solar system.</p>
@@ -42,15 +57,15 @@
     </section>
 
     <!-- About Content -->
-    <main class="container my-5">
+    <main class="about-main-container my-5" style="background: rgba(255,255,255,0.05); border-radius: 24px; padding: 40px;">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 mb-4">
                 <img src="../assets/images/logo.png" alt="Red Planet Ventures Logo" class="img-fluid mb-4" style="max-width: 250px;">
-                <h2 class="mb-3">Who We Are</h2>
+                <h2 class="mb-3 about-section-title">Who We Are</h2>
                 <p>
                     Red Planet Ventures is a pioneering space tourism company dedicated to making the wonders of our solar system accessible to everyone. Our mission is to provide safe, luxurious, and awe-inspiring journeys to Mars, Jupiter, Saturn, Neptune, and beyond. With a focus on comfort, adventure, and scientific discovery, we blend cutting-edge technology with world-class hospitality.
                 </p>
-                <h3 class="mt-4">Our Values</h3>
+                <h3 class="mt-4 about-section-title">Our Values</h3>
                 <ul>
                     <li>Safety and Comfort</li>
                     <li>Luxury and Adventure</li>
@@ -58,8 +73,8 @@
                     <li>Customer Satisfaction</li>
                 </ul>
             </div>
-            <div class="col-md-6">
-                <h2 class="mb-3">Our Destinations</h2>
+            <div class="col-md-6 mb-4">
+                <h2 class="mb-3 about-section-title">Our Destinations</h2>
                 <ul>
                     <li>
                         <strong>Mars:</strong> Red deserts, ancient relics, and dazzling canyons. Explore Olympus Mons and stargaze under Phobos and Deimos.
@@ -74,7 +89,7 @@
                         <strong>Saturn:</strong> Marvel at breathtaking rings and turbulent storms. Explore moons like Enceladus and Titan.
                     </li>
                 </ul>
-                <h3 class="mt-4">Why Choose Us?</h3>
+                <h3 class="mt-4 about-section-title">Why Choose Us?</h3>
                 <ul>
                     <li>Expert crew and guides</li>
                     <li>State-of-the-art spacecraft</li>
@@ -87,8 +102,8 @@
         <hr class="my-5">
 
         <div class="row">
-            <div class="col-md-6">
-                <h2>Customer Reviews</h2>
+            <div class="col-md-6 mb-4">
+                <h2 class="about-section-title">Customer Reviews</h2>
                 <div class="mb-3">
                     <span class="text-warning"><i class="fas fa-star"></i></span>
                     <span class="text-warning"><i class="fas fa-star"></i></span>
@@ -102,10 +117,10 @@
                     <footer class="blockquote-footer">A. Traveler</footer>
                 </blockquote>
             </div>
-            <div class="col-md-6">
-                <h2>Contact & Social Media</h2>
+            <div class="col-md-6 mb-4">
+                <h2 class="about-section-title">Contact & Social Media</h2>
                 <p>Have questions? <a href="Contact-Us.html">Contact us</a> for more information or to book your next journey!</p>
-                <div class="social-icons mb-3">
+                <div class="about-social-icons mb-3">
                     <a href="#"><img src="../assets/images/smInstagram.png" alt="Instagram" height="40"></a>
                     <a href="#"><img src="../assets/images/smX.png" alt="Twitter/X" height="40"></a>
                     <a href="#"><img src="../assets/images/smTicktock.png" alt="TikTok" height="40"></a>
@@ -121,7 +136,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer bg-white text-dark space-footer">
+    <footer class="about-footer">
         <div class="containerfluid text-center text-md-left">
             <div class="row">
                 <div class="col-md-4">
@@ -129,7 +144,7 @@
                     <p>Offering unforgettable trips to explore planets in our solar system.</p>
                 </div>
                 <div class="col-md-4">
-                    <h5 class="font-weight-bold">Company</h5>
+                    <h5 class="about-section-title">Company</h5>
                     <ul class="list-unstyled">
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="Flights.html">Flights</a></li>
@@ -137,8 +152,8 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5 class="font-weight-bold">Social Media Links</h5>
-                    <div class="social-icons">
+                    <h5 class="about-section-title">Social Media Links</h5>
+                    <div class="about-social-icons">
                         <a href="#"><img src="../assets/images/smInstagram.png" alt="Instagram" height="50"></a>
                         <a href="#"><img src="../assets/images/smX.png" alt="Twitter/X" height="50"></a>
                         <a href="#"><img src="../assets/images/smTicktock.png" alt="TikTok" height="50"></a>
@@ -196,6 +211,7 @@
       </div>
     </div>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
