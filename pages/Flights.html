@@ -37,19 +37,18 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="../pages/Contact-Us.html">Contact Us</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/About-Us.html">About Us</a>
+                                </li>
                             </ul>
-<<<<<<< HEAD
-                            <form class="form-inline ml-3 space-search-form" id="searchForm"  >
-                                <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
-=======
-                            <form class="form-inline ml-3 space-search-form">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
->>>>>>> parent of fe1b500 (Added seaarch bar js and fixed errors)
-                                <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-                            </form>
-                             <div class="ml-3 space-cart">
+                            <form class="form-inline ml-3 space-search-form" id="searchForm">
+    <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+</form>
+                            <div class="ml-3 space-cart" data-toggle="modal" data-target="#cartModal" style="cursor:pointer;">
                                 <i class="fas fa-shopping-cart"></i>
                                 <span class="badge badge-danger">2</span>
+                            </div>
                             </div>
                             </div>
                         </div>
@@ -64,18 +63,18 @@
         <!-- Filter and Sort -->
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div class="d-flex align-items-center">
-                <button class="btn btn-outline-light mr-3">Filter</button>
+                <button type="button" class="btn btn-outline-light mr-3" id="filterBtn">Filter</button>
                 <span id="resultsInfo">Showing 1-6 of 6 results</span>
             </div>
             <div class="d-flex align-items-center">
                 <span class="mr-2">Show</span>
-                <select class="custom-select mr-3">
+                <select class="custom-select mr-3" id="showSelect">
                     <option>6</option>
                     <option>12</option>
                     <option>18</option>
                 </select>
                 <span class="mr-2">Sort by</span>
-                <select class="custom-select">
+                <select class="custom-select" id="sortSelect">
                     <option>Default</option>
                     <option>Price</option>
                     <option>Popularity</option>
@@ -109,21 +108,14 @@
                                 <p class="card-text-uneven">Embark on a Mars voyage! Red deserts, ancient relics, and dazzling canyons await. Explore gravity-defying vistas, marvel at Olympus Mons, and stargaze under Phobos and Deimos. Unforgettable adventures beckon on the rust-colored landscapes of the Red Planet.</p>
 
                                 <div class="d-flex align-items-center mt-3">
-<<<<<<< HEAD
                                     <button class="btn btn-outline-primary btn-decrease">-</button>
-                                    <span class="mx-3 counter" style="color: black;">0</span>
+                                    <span class="mx-3 counter" style="color: black;">1</span>
                                     <button class="btn btn-outline-primary btn-increase">+</button>
                                     <button class="btn btn-danger ml-3 book-now-btn"
                                             data-id="mars"
                                             data-name="The Classic Mars Experience"
-                                            data-image="../assets/images/flighhtMars.png"
+                                            data-image="../assets/images/flightMars.png"
                                             data-price="25000">Book Now</button>
-=======
-                                    <button class="btn btn-outline-primary" onclick="decrease()">-</button>
-                                    <span class="mx-3">0</span>
-                                    <button class="btn btn-outline-primary" onclick="increase()">+</button>
-                                    <button class="btn btn-danger ml-3">Book Now</button>
->>>>>>> parent of fe1b500 (Added seaarch bar js and fixed errors)
                                 </div>
 
                                 <div class="details-uneven">
@@ -159,7 +151,7 @@
                                 <p class="card-text-even">Embark on a voyage to Neptune aboard the Nautilus Voyager. Witness surreal vistas of swirling clouds and rings. Experience weightlessness and stunning ringed canyons. Engage in thrilling spacewalks, observe celestial wonders, and savor gourmet space cuisine. An unforgettable adventure awaits, blending luxury with cosmic exploration.</p>
                                 <div class="d-flex align-items-center mt-3">
                                     <button class="btn btn-outline-primary btn-decrease">-</button>
-                                    <span class="mx-3 counter">0</span>
+                                    <span class="mx-3 counter">1</span>
                                     <button class="btn btn-outline-primary btn-increase">+</button>
                                     <button class="btn btn-danger ml-3 book-now-btn"
                                             data-id="neptune"
@@ -199,7 +191,6 @@
                                 </div>
                                 <p class="card-text-uneven">Embark on a Jupiter voyage aboard the Jupiter Odyssey. Witness its majestic storms and swirling atmospheres. Use microgravity to float among its bands, moons, and deep oceans. Experience cosmic wonder in luxury, blending exploration and relaxation.</p>
                                 <div class="d-flex align-items-center mt-3">
-<<<<<<< HEAD
                                     <button class="btn btn-outline-primary btn-decrease">-</button>
                                     <span class="mx-3 counter" style="color: black;">0</span>
                                     <button class="btn btn-outline-primary btn-increase">+</button>
@@ -208,12 +199,6 @@
                                             data-name="The Giant’s Journey"
                                             data-image="../assets/images/flightJupiter.png"
                                             data-price="65000">Book Now</button>
-=======
-                                    <button class="btn btn-outline-primary" onclick="decrease()">-</button>
-                                    <span class="mx-3">0</span>
-                                    <button class="btn btn-outline-primary" onclick="increase()">+</button>
-                                    <button class="btn btn-danger ml-3">Book Now</button>
->>>>>>> parent of fe1b500 (Added seaarch bar js and fixed errors)
                                 </div>
                                 <div class="details-uneven">
                                     <p>SKU: 55203</p>
@@ -248,7 +233,7 @@
                                 <p class="card-text-even">Embark on a thrilling voyage to Saturn aboard the Saturn Explorer. Marvel at its breathtaking rings and turbulent storms. Explore its diverse moons, from icy Enceladus to mysterious Titan. Engage in thrilling spacewalks and celestial explorations. Experience the wonders of the cosmos in unparalleled luxury, blending adventure with relaxation.</p>
                                 <div class="d-flex align-items-center mt-3">
                                     <button class="btn btn-outline-primary btn-decrease">-</button>
-                                    <span class="mx-3 counter">0</span>
+                                    <span class="mx-3 counter">1</span>
                                     <button class="btn btn-outline-primary btn-increase">+</button>
                                     <button class="btn btn-danger ml-3 book-now-btn"
                                             data-id="saturn"
@@ -288,21 +273,14 @@
                                 </div>
                                 <p class="card-text-uneven">Embark on a cosmic adventure to Uranus with our Uranus Uncharted tour. Explore its icy rings, witness mesmerizing auroras, and immerse yourself in gravity-defying activities. Experience the wonders of Uranus in a journey of a lifetime.</p>
                                 <div class="d-flex align-items-center mt-3">
-<<<<<<< HEAD
                                     <button class="btn btn-outline-primary btn-decrease">-</button>
-                                    <span class="mx-3 counter" style="color: black;">0</span>
+                                    <span class="mx-3 counter" style="color: black;">1</span>
                                     <button class="btn btn-outline-primary btn-increase">+</button>
                                     <button class="btn btn-danger ml-3 book-now-btn"
                                             data-id="uranus"
                                             data-name="Uranus Uncharted"
                                             data-image="../assets/images/flightUranus.png"
                                             data-price="50000">Book Now</button>
-=======
-                                    <button class="btn btn-outline-primary" onclick="decrease()">-</button>
-                                    <span class="mx-3">0</span>
-                                    <button class="btn btn-outline-primary" onclick="increase()">+</button>
-                                    <button class="btn btn-danger ml-3">Book Now</button>
->>>>>>> parent of fe1b500 (Added seaarch bar js and fixed errors)
                                 </div>
                                 <div class="details-uneven">
                                     <p>SKU: 65205</p>
@@ -337,7 +315,7 @@
                                 <p class="card-text-even">Experience the tranquility of lunar getaways with our Moonlight Meander package. Explore Earth's closest celestial neighbor, the Cratered Crater. Tour its soft luminescent plains, the Moon's Tranquil Mare, while basking in the serenity of its stunning landscapes under the moon's gentle glow. Perfect for your next luxury vacation or a romantic stargazing adventure.</p>
                                 <div class="d-flex align-items-center mt-3">
                                     <button class="btn btn-outline-primary btn-decrease">-</button>
-                                    <span class="mx-3 counter">0</span>
+                                    <span class="mx-3 counter">1</span>
                                     <button class="btn btn-outline-primary btn-increase">+</button>
                                     <button class="btn btn-danger ml-3 book-now-btn"
                                             data-id="Moonlight"
@@ -398,6 +376,46 @@
                 </footer>
         
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        </body>
-    </html>
+            <script src="../js/script.js"></script>
+
+            <!-- Cart Modal (place here, NOT inside <section>, and before </body>) -->
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Your Shopping Cart</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-dark cart-table mb-0">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- JS injects rows here -->
+          </tbody>
+        </table>
+        <div class="text-right mt-3">
+          <strong>Total: <span id="cartModalTotal">R 0.00</span></strong>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue Shopping</button>
+        <a href="pages/cart.html" class="btn btn-primary">Go to Cart Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

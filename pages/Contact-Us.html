@@ -36,9 +36,12 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Contact Us</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/About-Us.html">About Us</a>
+                                </li>
                             </ul>
-                            <form class="form-inline ml-3 space-search-form">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <form class="form-inline ml-3 space-search-form" id="searchForm">
+                                <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
                             </form>
                             <div class="ml-3 space-cart">
@@ -156,5 +159,42 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="../js/script.js"></script>
+         <!-- Cart Modal (place here, NOT inside <section>, and before </body>) -->
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Your Shopping Cart</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-dark cart-table mb-0">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- JS injects rows here -->
+          </tbody>
+        </table>
+        <div class="text-right mt-3">
+          <strong>Total: <span id="cartModalTotal">R 0.00</span></strong>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue Shopping</button>
+        <a href="pages/cart.html" class="btn btn-primary">Go to Cart Page</a>
+      </div>
+    </div>
+  </div>
+</div>
         </body>
         </html>
